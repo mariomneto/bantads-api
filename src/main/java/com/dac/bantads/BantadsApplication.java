@@ -10,4 +10,8 @@ public class BantadsApplication {
 		SpringApplication.run(BantadsApplication.class, args);
 	}
 
+	@GetMapping("/")
+	public String index(){
+		return "bantads-api";
+	}
 }
