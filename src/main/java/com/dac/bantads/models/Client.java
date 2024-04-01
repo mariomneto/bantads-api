@@ -12,15 +12,16 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "client")
 public class User implements Serializable {
     @Id
     private String cpf;
 
     @Column(nullable = false, length = 14)
     private String name;
+    @Column(nullable = false, length = 14)
+    private String name;
 
-    @Column(unique = true, length = 50)
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;
