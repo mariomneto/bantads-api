@@ -15,21 +15,15 @@ import java.util.Optional;
 public class PasswordService {
     @Autowired
     PasswordRepository passwordRepository;
-
     @Transactional
     public Password save(Password password) {
         return passwordRepository.save(password);
     }
-
     public Optional<Password> findByUserCpf(String userCpf) {
         return passwordRepository.findByUserCpf(userCpf);
     }
-
+    @Transactional
     public void update(Password password) {
         passwordRepository.update(password);
     }
-
-//    public void changePasswordWhereUserId(String password, UUID userId) {
-//        passwordRepository.changePasswordWhereUserId(password, userId);
-//    }
 }

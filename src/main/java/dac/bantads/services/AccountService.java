@@ -34,6 +34,7 @@ public class AccountService {
     public boolean existsByClientCpf(String cpf) {
         return accountRepository.existsByClientCpf(cpf);
     }
+    @Transactional
     public void update(Account account) {
         accountRepository.update(account);
     }

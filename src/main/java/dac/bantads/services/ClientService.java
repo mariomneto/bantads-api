@@ -29,21 +29,29 @@ public class ClientService {
     public void deleteByCpf(String cpf) {
         clientRepository.deleteByCpf(cpf);
     }
+    public void deleteById(Long id) {
+        clientRepository.deleteById(id);
+    }
 
     public Optional<Client> findByCpf(String cpf) {
         return clientRepository.findByCpf(cpf);
     }
+    public Optional<Client> findById(Long id) {
+        return clientRepository.findById(id);
+    }
     public Optional<Client> findByEmail(String email) {
         return clientRepository.findByEmail(email);
     }
-
-
     public boolean existsByCpf(String cpf) {
         return clientRepository.existsByCpf(cpf);
+    }
+    public boolean existsById(Long id) {
+        return clientRepository.existsById(id);
     }
     public boolean existsByEmail(String email) {
         return clientRepository.existsByEmail(email);
     }
+    @Transactional
     public void update(Client client) {
         clientRepository.update(client);
     }

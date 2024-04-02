@@ -39,6 +39,7 @@ public class ManagerService {
     public List<Manager> findAll(){
         return managerRepository.findAll();
     }
+    @Transactional
     public void update(Manager manager) {
         managerRepository.update(manager);
     }

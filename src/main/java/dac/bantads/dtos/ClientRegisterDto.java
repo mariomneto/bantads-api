@@ -19,6 +19,6 @@ public class ClientRegisterDto {
     @NotBlank
     @Size(max = 100)
     private String name;
-    @Column
+    @Column(nullable = false)
     private double monthlySalary;
 }

@@ -12,6 +12,7 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     boolean existsByAccountNumber(Long accountNumber);
     Optional<Account> findByAccountNumber(Long accountNumber);
     Optional<Account> findByClientCpf(String cpf);
+    Optional<Account> findByClientId(Long id);
     void deleteById(Long id);
     void deleteByClientCpf(String cpf);
     void update(Account account);
