@@ -1,6 +1,10 @@
 package dac.bantads.controllers;
 
 import dac.bantads.dtos.*;
+import dac.bantads.enums.FinancialMovementType;
+import dac.bantads.models.Deposit;
+import dac.bantads.models.Transfer;
+import dac.bantads.models.Withdrawal;
 import dac.bantads.services.AccountService;
 import dac.bantads.services.ClientService;
 import dac.bantads.services.FinancialMovementService;
@@ -11,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 @RestController
@@ -28,10 +33,11 @@ public class ClientController {
         var account = accountService.findById(depositDto.getAccountId()).get();
         account.setBalance(account.getBalance() + depositDto.getValue());
         accountService.update(account);
+        saveDeposit(depositDto);
         return ResponseEntity.status(HttpStatus.OK).body(account);
     }
     @PostMapping("{id}/sacar")
-    public ResponseEntity<Object> deposit(@PathVariable(value = "id") Long id, @RequestBody @Valid WithdrawalDto withdrawalDto) throws InterruptedException, ExecutionException {
+    public ResponseEntity<Object> withdrawal(@PathVariable(value = "id") Long id, @RequestBody @Valid WithdrawalDto withdrawalDto) throws InterruptedException, ExecutionException {
         var account = accountService.findById(withdrawalDto.getAccountId()).get();
         //checar saldo
         if(account.getBalance() < withdrawalDto.getValue()) {
@@ -39,6 +45,7 @@ public class ClientController {
         }
         account.setBalance(account.getBalance() - withdrawalDto.getValue());
         accountService.update(account);
+        saveWithdrawal(withdrawalDto);
         return ResponseEntity.status(HttpStatus.OK).body(account);
     }
     @PostMapping("{id}/transferir")
@@ -53,6 +60,7 @@ public class ClientController {
         originAccount.setBalance(originAccount.getBalance() - transferDto.getValue());
         accountService.update(originAccount);
         accountService.update(destinationAccount);
+        saveTransfer(transferDto);
         return ResponseEntity.status(HttpStatus.OK).body(originAccount);
     }
     @PostMapping("{id}/historico")
@@ -78,5 +86,33 @@ public class ClientController {
         clientService.update(client);
         accountService.update(account);
         return ResponseEntity.status(HttpStatus.OK).body(client);
+    }
+
+    private void saveDeposit(DepositDto depositDto) {
+        var deposit = new Deposit();
+        deposit.setType(FinancialMovementType.DEPOSIT);
+        deposit.setDate(new Date());
+        deposit.setAccountId(depositDto.getAccountId());
+        deposit.setValue(depositDto.getValue());
+        financialMovementService.save(deposit);
+    }
+
+    private void saveWithdrawal(WithdrawalDto withdrawalDto) {
+        var withdrawal = new Withdrawal();
+        withdrawal.setType(FinancialMovementType.WITHDRAWAL);
+        withdrawal.setDate(new Date());
+        withdrawal.setAccountId(withdrawalDto.getAccountId());
+        withdrawal.setValue(withdrawalDto.getValue());
+        financialMovementService.save(withdrawal);
+    }
+
+    private void saveTransfer(TransferDto transferDto) {
+        var transfer = new Transfer();
+        transfer.setType(FinancialMovementType.TRANSFER);
+        transfer.setDate(new Date());
+        transfer.setOriginAccountId(transferDto.getOriginAccountId());
+        transfer.setDestinationAccountId(transferDto.getDestinationAccountId());
+        transfer.setValue(transferDto.getValue());
+        financialMovementService.save(transfer);
     }
 }

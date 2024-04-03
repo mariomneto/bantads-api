@@ -25,6 +25,9 @@ public class AccountService {
     public Optional<Account> findByClientCpf(String cpf) {
         return accountRepository.findByClientCpf(cpf);
     }
+    public Optional<Account> findByClientId(Long id) {
+        return accountRepository.findByClientId(id);
+    }
     public Optional<Account> findById(Long id) {
         return accountRepository.findById(id);
     }
