@@ -16,9 +16,9 @@ public class Account implements Serializable {
     @Column(nullable = false)
     private double limit;
     @Column(nullable = false)
-    private String clientCpf;
+    private Long clientId;
     @Column
-    private String managerCpf;
+    private Long managerId;
     @Embedded
     private AccountApproval accountApproval;
 }

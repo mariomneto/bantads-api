@@ -10,10 +10,12 @@ import java.util.List;
 @Data
 @Table(name = "manager")
 public class Manager implements Serializable {
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+    @Column(nullable = false, length = 14)
     private String cpf;
     @Column(nullable = false, length = 50)
     private String name;
     @ElementCollection
-    private List<String> clientCpfs;
+    private List<Long> accountIds;
 }

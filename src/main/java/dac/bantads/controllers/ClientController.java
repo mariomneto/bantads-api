@@ -28,6 +28,13 @@ public class ClientController {
     final ClientService clientService;
     @Autowired
     final FinancialMovementService financialMovementService;
+    @GetMapping("{id}")
+    public ResponseEntity<Object> client(@PathVariable(value = "id") Long id) throws InterruptedException, ExecutionException {
+        var client = clientService.findById(id).get();
+        var account = accountService.findById(id).get();
+        var accountClient = new AccountClientDto(client, account);
+        return ResponseEntity.status(HttpStatus.OK).body(accountClient);
+    }
     @PostMapping("{id}/depositar")
     public ResponseEntity<Object> deposit(@PathVariable(value = "id") Long id, @RequestBody @Valid DepositDto depositDto) throws InterruptedException, ExecutionException {
         var account = accountService.findById(depositDto.getAccountId()).get();

@@ -56,7 +56,6 @@ public class AuthController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar conta(2).");
         }
-
     }
 
     @PostMapping("/login")

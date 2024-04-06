@@ -24,11 +24,17 @@ public class ManagerService {
     public void deleteByCpf(String cpf) {
         managerRepository.deleteByCpf(cpf);
     }
+    public Optional<Manager> findById(Long id) {
+        return managerRepository.findById(id);
+    }
     public Optional<Manager> findByCpf(String cpf) {
         return managerRepository.findByCpf(cpf);
     }
     public Optional<Manager> findByEmail(String email) {
         return managerRepository.findByEmail(email);
+    }
+    public boolean existsById(Long id) {
+        return managerRepository.existsById(id);
     }
     public boolean existsByCpf(String cpf) {
         return managerRepository.existsByCpf(cpf);

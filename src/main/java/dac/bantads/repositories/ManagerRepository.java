@@ -11,9 +11,11 @@ import java.util.UUID;
 @Repository
 public interface ManagerRepository extends JpaRepository<Manager, UUID> {
     boolean existsByCpf(String cpf);
+    boolean existsById(Long id);
     boolean existsByEmail(String email);
     Optional<Manager> findByEmail(String email);
     Optional<Manager> findByCpf(String cpf);
+    Optional<Manager> findById(Long id);
     void deleteByCpf(String cpf);
     List<Manager> findAll();
     void update(Manager manager);
