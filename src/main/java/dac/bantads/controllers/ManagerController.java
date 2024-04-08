@@ -30,9 +30,9 @@ public class ManagerController {
     @Autowired
     final ClientService clientService;
 
-    @GetMapping("{id}/contas-pendentes")
-    public ResponseEntity<Object> manager(@PathVariable(value = "id") Long id) throws InterruptedException, ExecutionException {
-        var manager = managerService.findById(id).get();
+    @GetMapping("{managerId}/contas-pendentes")
+    public ResponseEntity<Object> manager(@PathVariable(value = "managerId") Long managerId) throws InterruptedException, ExecutionException {
+        var manager = managerService.findById(managerId).get();
         List<AccountClientDto> accountsAndClients = new ArrayList<>();
         for(Long accountId: manager.getAccountIds()) {
             var account = accountService.findById(accountId).get();
@@ -45,9 +45,9 @@ public class ManagerController {
         return ResponseEntity.status(HttpStatus.OK).body(accountsAndClients);
     }
 
-    @GetMapping("{id}/pesquisar-cliente")
-    public ResponseEntity<Object> searchClients(@PathVariable(value = "id") Long id) throws InterruptedException, ExecutionException {
-        var manager = managerService.findById(id).get();
+    @GetMapping("{managerId}/pesquisar-cliente")
+    public ResponseEntity<Object> searchClients(@PathVariable(value = "managerId") Long managerId) throws InterruptedException, ExecutionException {
+        var manager = managerService.findById(managerId).get();
         List<AccountClientDto> accountsAndClients = new ArrayList<>();
         for(Long accountId: manager.getAccountIds()) {
             var account = accountService.findById(accountId).get();
@@ -59,13 +59,16 @@ public class ManagerController {
         return ResponseEntity.status(HttpStatus.OK).body(accountsAndClients);
     }
 
-    @PostMapping("avaliar-conta/{accountId}")
-    public ResponseEntity<Object> approveAccount(@PathVariable(value = "accountId") Long accountId, @RequestBody @Valid ManagerAccountApprovalDto approvalDto) {
+    @PostMapping("{managerId}/avaliar-conta/{accountId}")
+    public ResponseEntity<Object> approveAccount(@PathVariable(value = "managerId") Long managerId, @PathVariable(value = "accountId") Long accountId, @RequestBody @Valid ManagerAccountApprovalDto approvalDto) {
         var optionalAccount = accountService.findById(accountId);
         if(optionalAccount.isEmpty()){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Conta não existe.");
         }
         var account = optionalAccount.get();
+        if(account.getManagerId() != managerId){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Esta conta não é responsabilidade deste gerente.");
+        }
         account.getAccountApproval().setAccountApprovalStatus(approvalDto.isApproved() ?
                 AccountApprovalStatus.APPROVED : AccountApprovalStatus.REJECTED);
         try {

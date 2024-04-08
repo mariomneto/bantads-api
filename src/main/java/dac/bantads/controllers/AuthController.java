@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequiredArgsConstructor
@@ -38,16 +39,15 @@ public class AuthController {
 //    final CustomAuthenticationProvider authenticationProvider;
 
     @PostMapping("/registrar")
-    public ResponseEntity<Object> register(@RequestBody @Valid ClientRegisterDto clientRegisterDto) {
-
+    public ResponseEntity<Object> register(@RequestBody @Valid ClientRegisterDto clientRegisterDto) throws InterruptedException, ExecutionException {
         //cada cliente só uma conta
         if (clientService.existsByCpf(clientRegisterDto.getCpf())) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Cliente com esse cpf já existe.");
         }
         try {
             //ao cadastrar criar uma conta automaticamente
-            var client = storeNewClient(clientRegisterDto);
-            var account = storeNewAccount(clientRegisterDto);
+            var client = storeNewClient(clientRegisterDto).get();
+            var account = storeNewAccount(clientRegisterDto, client);
             if(account.isEmpty()){
                 //todo: enviar email para cliente
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar conta(1).");
@@ -59,7 +59,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Object> login(@RequestBody @Valid UserLoginDto userLoginDto) {
+    public ResponseEntity<Object> login(@RequestBody @Valid UserLoginDto userLoginDto) throws InterruptedException, ExecutionException {
         var client = clientService.findByEmail(userLoginDto.getEmail());
         if(!client.isEmpty()){
             //todo autenticação
@@ -78,7 +78,7 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Conta não encontrada.");
     }
 
-    private Optional<Client> storeNewClient(ClientRegisterDto clientRegisterDto) {
+    private Optional<Client> storeNewClient(ClientRegisterDto clientRegisterDto) throws InterruptedException, ExecutionException {
         var client = new Client();
         BeanUtils.copyProperties(clientRegisterDto, client);
         Client newClient;
@@ -95,9 +95,9 @@ public class AuthController {
         return Optional.of(newClient);
     }
 
-    private Optional<Account> storeNewAccount(ClientRegisterDto clientRegisterDto) {
+    private Optional<Account> storeNewAccount(ClientRegisterDto clientRegisterDto, Client client) throws InterruptedException, ExecutionException {
         var account = new Account();
-        account.setClientCpf(clientRegisterDto.getCpf());
+        account.setClientId(client.getId());
         if(clientRegisterDto.getMonthlySalary() > 2000){
             account.setLimit(clientRegisterDto.getMonthlySalary() / 2);
         }
@@ -106,7 +106,7 @@ public class AuthController {
         int minCount = Integer.MAX_VALUE;
         Optional<Manager> assignedManager = Optional.empty();
         for (Manager manager : managers) {
-            int count = manager.getClientCpfs().size();
+            int count = manager.getAccountIds().size();
             if (count < minCount) {
                 //designar gerente
                 minCount = count;
@@ -118,7 +118,7 @@ public class AuthController {
             return Optional.empty();
         }
 
-        account.setManagerCpf(assignedManager.get().getCpf());
+        account.setManagerId(assignedManager.get().getId());
 
         var accountApproval = new AccountApproval();
         accountApproval.setAccountApprovalStatus(AccountApprovalStatus.PENDING_APPROVAL);
