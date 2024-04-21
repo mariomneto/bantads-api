@@ -10,13 +10,10 @@ import java.util.UUID;
 @Data
 @Table(name = "password")
 public class Password {
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
     @Column(nullable = false, length = 14)
-    private String userId;
+    private Long userId;
     @Column(nullable = false, length = 60)
     private String password;
 }

@@ -31,12 +31,13 @@ public class ManagerController {
     final ClientService clientService;
 
     @GetMapping("{managerId}/contas-pendentes")
-    public ResponseEntity<Object> manager(@PathVariable(value = "managerId") Long managerId) throws InterruptedException, ExecutionException {
+    public ResponseEntity<Object> manager(@PathVariable(value = "managerId") Long managerId)
+            throws InterruptedException, ExecutionException {
         var manager = managerService.findById(managerId).get();
         List<AccountClientDto> accountsAndClients = new ArrayList<>();
-        for(Long accountId: manager.getAccountIds()) {
+        for (Long accountId : manager.getAccountIds()) {
             var account = accountService.findById(accountId).get();
-            if (account.getAccountApproval().getAccountApprovalStatus() == AccountApprovalStatus.PENDING_APPROVAL){
+            if (account.getAccountApproval().getAccountApprovalStatus() == AccountApprovalStatus.PENDING_APPROVAL) {
                 var client = clientService.findById(account.getClientId()).get();
                 var accountClient = new AccountClientDto(client, account);
                 accountsAndClients.add(accountClient);
@@ -45,38 +46,65 @@ public class ManagerController {
         return ResponseEntity.status(HttpStatus.OK).body(accountsAndClients);
     }
 
-    @GetMapping("{managerId}/pesquisar-cliente")
-    public ResponseEntity<Object> searchClients(@PathVariable(value = "managerId") Long managerId) throws InterruptedException, ExecutionException {
+    @GetMapping("{managerId}/clientes")
+    public ResponseEntity<Object> searchClients(@PathVariable(value = "managerId") Long managerId,
+            @RequestParam("data") String name, @RequestParam("data") String cpf)
+            throws InterruptedException, ExecutionException {
         var manager = managerService.findById(managerId).get();
         List<AccountClientDto> accountsAndClients = new ArrayList<>();
-        for(Long accountId: manager.getAccountIds()) {
-            var account = accountService.findById(accountId).get();
-            var client = clientService.findById(account.getClientId()).get();
-            var accountClient = new AccountClientDto(client, account);
-            accountsAndClients.add(accountClient);
+
+        if(name != null || cpf != null) {
+            for (Long accountId : manager.getAccountIds()) {
+                var optionalClient = name != null ? clientService.findByNameContaining(name) : clientService.findByCpfContaining(cpf);
+                if(!optionalClient.isEmpty()) {
+                    var client = optionalClient.get();
+                    var account = accountService.findByClientId(client.getId()).get();
+                    var accountClient = new AccountClientDto(client, account);
+                    accountsAndClients.add(accountClient);
+                }
+            }
         }
-        //todo ordenar por nome dos clientes
+        else {
+            for (Long accountId : manager.getAccountIds()) {
+                var account = accountService.findById(accountId).get();
+                var client = clientService.findById(account.getClientId()).get();
+                var accountClient = new AccountClientDto(client, account);
+                accountsAndClients.add(accountClient);
+            }
+        }
+
+        // todo ordenar por nome dos clientes
         return ResponseEntity.status(HttpStatus.OK).body(accountsAndClients);
     }
 
+    @GetMapping("{managerId}/melhores-clientes")
+    public ResponseEntity<Object> bestClients(@PathVariable(value = "managerId") Long managerId) {
+        List<Client> clients = clientService.findTop5ByOrderByBalanceDesc();
+        return ResponseEntity.status(HttpStatus.OK).body(clients);
+    }
+
     @PostMapping("{managerId}/avaliar-conta/{accountId}")
-    public ResponseEntity<Object> approveAccount(@PathVariable(value = "managerId") Long managerId, @PathVariable(value = "accountId") Long accountId, @RequestBody @Valid ManagerAccountApprovalDto approvalDto) {
+    public ResponseEntity<Object> approveAccount(@PathVariable(value = "managerId") Long managerId,
+                                                 @PathVariable(value = "accountId") Long accountId,
+                                                 @RequestBody @Valid ManagerAccountApprovalDto approvalDto) {
         var optionalAccount = accountService.findById(accountId);
-        if(optionalAccount.isEmpty()){
+        if (optionalAccount.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Conta não existe.");
         }
         var account = optionalAccount.get();
-        if(account.getManagerId() != managerId){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Esta conta não é responsabilidade deste gerente.");
+        if (account.getManagerId() != managerId) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Esta conta não é responsabilidade deste gerente.");
         }
-        account.getAccountApproval().setAccountApprovalStatus(approvalDto.isApproved() ?
-                AccountApprovalStatus.APPROVED : AccountApprovalStatus.REJECTED);
+        account.getAccountApproval().setAccountApprovalStatus(
+                approvalDto.isApproved() ? AccountApprovalStatus.APPROVED : AccountApprovalStatus.REJECTED);
         try {
             accountService.update(account);
-            //todo: mandar email para cliente com senha
+            // todo: mandar email para cliente com senha
             return ResponseEntity.status(HttpStatus.OK).body("");
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Houve um erro. A conta não foi avaliada.");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Houve um erro. A conta não foi avaliada.");
         }
 
     }

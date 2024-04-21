@@ -20,7 +20,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/cliente")
+@RequestMapping("/clientes")
 public class ClientController {
     @Autowired
     final AccountService accountService;
@@ -94,7 +94,6 @@ public class ClientController {
         accountService.update(account);
         return ResponseEntity.status(HttpStatus.OK).body(client);
     }
-
     private void saveDeposit(DepositDto depositDto) {
         var deposit = new Deposit();
         deposit.setType(FinancialMovementType.DEPOSIT);
@@ -103,7 +102,6 @@ public class ClientController {
         deposit.setValue(depositDto.getValue());
         financialMovementService.save(deposit);
     }
-
     private void saveWithdrawal(WithdrawalDto withdrawalDto) {
         var withdrawal = new Withdrawal();
         withdrawal.setType(FinancialMovementType.WITHDRAWAL);
@@ -112,7 +110,6 @@ public class ClientController {
         withdrawal.setValue(withdrawalDto.getValue());
         financialMovementService.save(withdrawal);
     }
-
     private void saveTransfer(TransferDto transferDto) {
         var transfer = new Transfer();
         transfer.setType(FinancialMovementType.TRANSFER);

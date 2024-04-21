@@ -35,8 +35,6 @@ public class AuthController {
     final BCryptPasswordEncoder passwordEncoder;
     @Autowired
     final PasswordService passwordService;
-//    @Autowired
-//    final CustomAuthenticationProvider authenticationProvider;
 
     @PostMapping("/registrar")
     public ResponseEntity<Object> register(@RequestBody @Valid ClientRegisterDto clientRegisterDto) throws InterruptedException, ExecutionException {
@@ -89,7 +87,7 @@ public class AuthController {
         }
         //tabela separada com pares <userId, senha>
         var password = new Password();
-        password.setUserId(newClient.getCpf());
+        password.setUserId(newClient.getId());
         password.setPassword(passwordEncoder.encode(clientRegisterDto.getPassword()));
         passwordService.save(password);
         return Optional.of(newClient);

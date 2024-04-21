@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,14 +20,11 @@ public class AccountService {
         return accountRepository.save(account);
     }
     @Transactional
-    public void deleteByClientCpf(String cpf) {
-        accountRepository.deleteByClientCpf(cpf);
-    }
-    public Optional<Account> findByClientCpf(String cpf) {
-        return accountRepository.findByClientCpf(cpf);
-    }
     public Optional<Account> findByClientId(Long id) {
         return accountRepository.findByClientId(id);
+    }
+    public List<Account> findByManagerId(Long id) {
+        return accountRepository.findByManagerId(id);
     }
     public Optional<Account> findById(Long id) {
         return accountRepository.findById(id);

@@ -19,12 +19,10 @@ import java.util.UUID;
 public class ClientService {
     @Autowired
     ClientRepository clientRepository;
-
     @Transactional
     public Client save(Client client) {
         return clientRepository.save(client);
     }
-
     @Transactional
     public void deleteByCpf(String cpf) {
         clientRepository.deleteByCpf(cpf);
@@ -33,11 +31,20 @@ public class ClientService {
         clientRepository.deleteById(id);
     }
 
+    public Optional<Client> findById(Long id) {
+        return clientRepository.findById(id);
+    }
+    public List<Client> findAll() {
+        return clientRepository.findAll();
+    }
     public Optional<Client> findByCpf(String cpf) {
         return clientRepository.findByCpf(cpf);
     }
-    public Optional<Client> findById(Long id) {
-        return clientRepository.findById(id);
+    public Optional<Client> findByCpfContaining(String cpf) {
+        return clientRepository.findByCpfContaining(cpf);
+    }
+    public Optional<Client> findByNameContaining(String name) {
+        return clientRepository.findByNameContaining(name);
     }
     public Optional<Client> findByEmail(String email) {
         return clientRepository.findByEmail(email);
@@ -54,5 +61,8 @@ public class ClientService {
     @Transactional
     public void update(Client client) {
         clientRepository.update(client);
+    }
+    public List<Client> findTop5ByOrderByBalanceDesc() {
+        return clientRepository.findTop5ByOrderByBalanceDesc();
     }
 }
