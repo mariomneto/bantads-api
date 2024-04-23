@@ -52,13 +52,9 @@ app.post("/login", urlencodedParser, (req, res, next) => {
         var token = jwt.sign({ id }, process.env.SECRET, {
             expiresIn: 300 // expires in 5min
         });
-
         return res.json({auth: true, token });
     }
-
-    //TODO login com db
-
-    res.status(500).json({message: 'Login inválido!'});
+    authServiceProxy(req, res, next);
 });
 
 app.post("/logout", (req, res) => {
@@ -67,6 +63,44 @@ app.post("/logout", (req, res) => {
 
 app.get('/client', verifyJWT, (req, res, next) => {
     clientServiceProxy(req, res, next);
+});
+
+const authServiceProxy = httpProxy('http://localhost:5000', {
+    proxyReqBodyDecorator: (bodyContent, srcReq) => {
+        try {
+            retBody = {};
+            retBody.login = bodyContent.user;
+            retBody.senha = bodyContent.password;
+            bodyContent = retBody;
+        }
+        catch(e) {
+            console.log('- ERRO: ' + e);
+        }
+        return bodyContent;
+    },
+    
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+        proxyReqOpts.headers['Content-Type'] = 'application/json';
+        proxyReqOpts.method = 'POST';
+        return proxyReqOpts;
+    },
+
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+        if (proxyRes.statusCode == 200) {
+            var str = Buffer.from(proxyResData).toString('utf-8');
+            var objBody = JSON.parse(str);
+            const id = objBody.id;
+            const token = jwt.sign({ id }, process.env.SECRET, {
+                expiresIn: 300 // expira em 5min
+            });
+            userRes.status(200);
+            return { auth: true, token: token, data: objBody };
+        }
+        else {
+            userRes.status(401);
+            return {message: 'Login inválido!'};
+        }
+    }
 });
 
 //cria servidor na porta 3000
