@@ -1,0 +1,45 @@
+services:
+  spring:
+    image: sonamsamdupkhangsar/springboot-docker
+    container_name: spring
+    build:
+      context: ../../..
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/auth
+      - SPRING_DATASOURCE_USERNAME=bantads
+      - SPRING_DATASOURCE_PASSWORD=bantads
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - "6379"
+    networks:
+      - default-network
+
+  mongo:
+  image: mongo:7.0
+  environment:
+    MONGO_INITDB_ROOT_USERNAME: bantads
+    MONGO_INITDB_ROOT_PASSWORD: bantads
+  ports:
+    - 27017:27017
+  volumes:
+    - mongodata:/data/db
+
+#    rabbitmq:
+#        image: rabbitmq
+#        container_name: rabbitmq
+#        ports:
+#            - 5672:5672
+#            - 15672:15672
+#        networks:
+#            - default-network
+#        volumes:
+#            - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq
+#            - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+networks:
+  default-network:
+    driver: bridge
+
+volumes:
+  mongodata:
+    driver: local
