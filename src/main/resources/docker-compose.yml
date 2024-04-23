@@ -1,0 +1,60 @@
+services:
+    spring:
+        image: sonamsamdupkhangsar/springboot-docker
+        container_name: spring
+        build:
+            context: ../../..
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/bantads
+            - SPRING_DATASOURCE_USERNAME=bantads
+            - SPRING_DATASOURCE_PASSWORD=bantads
+            - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+        ports:
+            - '6379'
+        networks:
+            - default-network
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        environment: 
+            - PGADMIN_DEFAULT_EMAIL=mariom_mmn@hotmail.com
+            - PGADMIN_DEFAULT_PASSWORD=12345
+        ports: 
+            - 89:80
+        networks:
+            - default-network
+
+    postgres:
+        image: postgres:10
+        platform: linux/x86_64
+        container_name: postgres
+        restart: always
+        environment: 
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=bantads
+        ports:
+            - 5432:5432
+        networks:
+            - default-network
+        volumes:
+            - /home/mario/data/postgres:/var/lib/postgresql/data
+
+#    rabbitmq:
+#        image: rabbitmq
+#        container_name: rabbitmq
+#        ports:
+#            - 5672:5672
+#            - 15672:15672
+#        networks:
+#            - default-network
+#        volumes:
+#            - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq
+#            - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+networks:
+    default-network:
+        driver: bridge

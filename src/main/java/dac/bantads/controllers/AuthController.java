@@ -1,5 +1,6 @@
 package dac.bantads.controllers;
 
+import dac.bantads.dtos.AccountClientDto;
 import dac.bantads.dtos.ClientRegisterDto;
 import dac.bantads.dtos.UserLoginDto;
 import dac.bantads.enums.AccountApprovalStatus;
@@ -50,7 +51,8 @@ public class AuthController {
                 //todo: enviar email para cliente
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar conta(1).");
             }
-            return ResponseEntity.status(HttpStatus.CREATED).body(client);
+            var accountClient = new AccountClientDto(client, account.get());
+            return ResponseEntity.status(HttpStatus.CREATED).body(accountClient);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar conta(2).");
         }

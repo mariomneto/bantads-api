@@ -35,6 +35,25 @@ public class ClientController {
         var accountClient = new AccountClientDto(client, account);
         return ResponseEntity.status(HttpStatus.OK).body(accountClient);
     }
+    @PutMapping("{id}")
+    public ResponseEntity<Object> updateClient(@PathVariable(value = "id") Long id, @RequestBody @Valid ClientUpdateDto clientUpdateDto) throws InterruptedException, ExecutionException {
+        var client = clientService.findById(id).get();
+        var account = accountService.findByClientId(id).get();
+        var newSalary = clientUpdateDto.getSalary();
+        if(newSalary != client.getSalary()){
+            //limite metade do salario
+            var newLimit = newSalary / 2;
+            if(newSalary < 2000) {
+                //zerar limite se abaixo de 2k
+                newLimit=0;
+            }
+            //se saldo for maior que limite, limite é saldo
+            account.setLimit(newLimit > account.getBalance() ? newLimit : account.getBalance());
+        }
+        clientService.update(client);
+        accountService.update(account);
+        return ResponseEntity.status(HttpStatus.OK).body(client);
+    }
     @PostMapping("{id}/depositar")
     public ResponseEntity<Object> deposit(@PathVariable(value = "id") Long id, @RequestBody @Valid DepositDto depositDto) throws InterruptedException, ExecutionException {
         var account = accountService.findById(depositDto.getAccountId()).get();
@@ -74,25 +93,6 @@ public class ClientController {
     public ResponseEntity<Object> history(@PathVariable(value = "id") Long id, @RequestBody @Valid BankStatementDto bankStatementDto) throws InterruptedException, ExecutionException {
         var history = financialMovementService.findAllWhereClientId(id);
         return ResponseEntity.status(HttpStatus.OK).body(history);
-    }
-    @PostMapping("{id}/atualizar")
-    public ResponseEntity<Object> updateClient(@PathVariable(value = "id") Long id, @RequestBody @Valid ClientUpdateDto clientUpdateDto) throws InterruptedException, ExecutionException {
-        var client = clientService.findById(id).get();
-        var account = accountService.findByClientId(id).get();
-        var newSalary = clientUpdateDto.getSalary();
-        if(newSalary != client.getSalary()){
-            //limite metade do salario
-            var newLimit = newSalary / 2;
-            if(newSalary < 2000) {
-                //zerar limite se abaixo de 2k
-                newLimit=0;
-            }
-            //se saldo for maior que limite, limite é saldo
-            account.setLimit(newLimit > account.getBalance() ? newLimit : account.getBalance());
-        }
-        clientService.update(client);
-        accountService.update(account);
-        return ResponseEntity.status(HttpStatus.OK).body(client);
     }
     private void saveDeposit(DepositDto depositDto) {
         var deposit = new Deposit();

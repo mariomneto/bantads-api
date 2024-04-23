@@ -21,7 +21,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/gerente")
+@RequestMapping("/gerentes")
 public class ManagerController {
     @Autowired
     final ManagerService managerService;

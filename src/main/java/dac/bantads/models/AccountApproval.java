@@ -11,7 +11,7 @@ import java.util.Date;
 public class AccountApproval {
     @Column(nullable = false)
     private AccountApprovalStatus accountApprovalStatus;
-    @Column(nullable = false, columnDefinition = "DATE")
+    @Column(columnDefinition = "DATE")
     private Date evaluationDate;
     @Column
     private String refusalReason;
