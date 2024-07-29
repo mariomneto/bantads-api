@@ -6,16 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bantads" />
+        <module name="ms-auth" />
+        <module name="lib-bantads" />
+        <module name="ms-account" />
+        <module name="ms-manager" />
+        <module name="ms-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bantads" target="17" />
+      <module name="lib-bantads" target="17" />
+      <module name="ms-account" target="17" />
+      <module name="ms-auth" target="17" />
+      <module name="ms-client" target="17" />
+      <module name="ms-manager" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bantads" options="-parameters" />
+      <module name="lib-bantads" options="-parameters" />
+      <module name="ms-account" options="-parameters" />
+      <module name="ms-auth" options="-parameters" />
+      <module name="ms-client" options="-parameters" />
+      <module name="ms-manager" options="-parameters" />
     </option>
   </component>
 </project>

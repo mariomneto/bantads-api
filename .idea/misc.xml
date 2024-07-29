@@ -4,6 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/lib-bantads/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-client/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-account/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-manager/pom.xml" />
       </list>
     </option>
   </component>

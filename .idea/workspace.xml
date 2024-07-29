@@ -4,7 +4,267 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8fd16d9-f930-40b4-b0cd-840aa312c7e8" name="Changes" comment="" />
+    <list default="true" id="a8fd16d9-f930-40b4-b0cd-840aa312c7e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_bantads_lib_bantads_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_14_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_awaitility_awaitility_4_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_31_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_docker_compose_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/controllers/AdministratorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/controllers/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/controllers/ManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/enums/AccountApprovalStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/enums/FinancialMovementType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/AdministratorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/FinancialMovementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/ManagerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/repositories/PasswordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/AdministratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/FinancialMovementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/ManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/services/PasswordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-account.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-account/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/controllers/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/repositories/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/repositories/FinancialMovementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/services/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/client/services/FinancialMovementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-client/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-client/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_12_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_12_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_14_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_21_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_21_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_24_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_24_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_awaitility_awaitility_4_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_4_4_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_4_4_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_3_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_3_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/enum/AccountApprovalStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/enum/FinancialMovementType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/enum/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/AccountApproval.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/AccountApproval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/FinancialMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/FinancialMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/Withdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/Withdrawal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/AccountClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/AccountClientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/BankStatementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/BankStatementDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ClientAccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ClientAccountDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ClientAccountManagerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ClientAccountManagerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ClientRegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ClientRegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ClientUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ClientUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/DepositDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/DepositDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ManagerAccountApprovalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ManagerAccountApprovalDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ManagerCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ManagerCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ManagerPerformanceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ManagerPerformanceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/ManagerUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/ManagerUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/TransferDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/TransferDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/UserLoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/UserLoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-bantads/src/main/java/model/dtos/WithdrawalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib-bantads/src/main/java/com/bantads/model/dtos/WithdrawalDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/src/main/java/dac/bantads/AuthApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/src/main/resources/docker-account.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-account/bantads/src/test/java/dac/bantads/AuthApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/src/main/java/dac/bantads/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/src/main/java/dac/bantads/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/src/main/resources/docker-auth.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-auth/bantads/src/test/java/dac/bantads/AuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/src/test/java/dac/bantads/AuthApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/src/main/java/dac/bantads/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/src/main/java/dac/bantads/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ms-auth/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-client/bantads/src/test/java/dac/bantads/AuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-client/src/test/java/dac/bantads/AuthApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/src/main/java/dac/bantads/AuthApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-manager/bantads/src/test/java/dac/bantads/AuthApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,12 +306,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/mario/bantads-api"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "//wsl$/Ubuntu-20.04/home/mario/bantads-api/lib-bantads/src/main/java/com/bantads",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/dac/bantads/enum" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\lib-bantads\src\main\java\com\bantads" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\ms-client\src\main\java\dac\bantads\controllers" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\ms-auth" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\ms-client\src\main\java\dac\bantads\client\repositories" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\ms-client\src\main\java\dac\bantads\client\services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\mario\bantads-api\ms-client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dac.bantads.services" />
@@ -70,6 +342,56 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="lib-bantads" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="lib-bantads" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="lib-bantads" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

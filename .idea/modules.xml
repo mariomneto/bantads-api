@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bantads.iml" filepath="$PROJECT_DIR$/bantads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-bantads.iml" filepath="$PROJECT_DIR$/lib-bantads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-account.iml" filepath="$PROJECT_DIR$/ms-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-auth.iml" filepath="$PROJECT_DIR$/ms-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-client.iml" filepath="$PROJECT_DIR$/ms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-manager.iml" filepath="$PROJECT_DIR$/ms-manager.iml" />
     </modules>
   </component>
 </project>
